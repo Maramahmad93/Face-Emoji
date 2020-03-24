@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Emoji</title>
+	<style type="text/css">
+		.circle{
+
+			position: relative;
+			top: 50%;
+			left: 50%;
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			border-radius: 50%;
+			margin-top: 100px;
+			box-shadow: 0 5px 5px rgba(31,28,28,0.37);
+
+
+		}
+
+
+		.circle .eyeleft{
+			position: absolute;
+			background-color: black;
+			top: 54px;
+			left:43px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			transition: height 0.1s linear 0.1s  ;
+
+		}
+		
+
+	.circle .eyeright{
+			position: absolute;
+			top: 55px;
+			left:123px;
+			background-color: black;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			transition: height 0.1s  linear 0.1s  ;
+
+		}
+
+		
+		.circle .nose{
+			position: absolute;
+			top: 94px;
+			left: 96px;
+			background-color: black;
+			width: 6px;
+			height: 39px;
+			border-radius: 20%; 
+		}
+
+
+
+		.circle .mouth{
+			position: absolute;
+			top: 20%;
+			left: 50%;
+            width: 100px;
+			height: 100px;
+			border-radius: 0px;
+			border:10px solid transparent;
+			border-bottom:10px solid #000; 
+			transform: translateX(-50%);
+			transition:0.5s ;
+
+		}	
+
+			.circle .mouth2{
+			position: absolute;
+			top: 75%;
+			left: 50%;
+            width: 100px;
+			height: 100px;
+			border-radius: 0px;
+			border:10px solid transparent;
+			border-top:10px solid #000; 
+			transform: translateX(-50%);
+			transition:0.5s ;
+
+		}
+
+		@keyframes eyemoving{
+			0%{ height: 30px; }
+			25%{ height: 33px; }
+			75%{ height: 35px; }
+            100%{ height: 40px; }
+		}
+
+
+  	.circle:hover .eyeright{
+
+			animation: eyemoving 1s linear 0.2s 5 ; 
+			animation-fill-mode: backwards;
+
+		}      
+
+
+		
+		.circle:hover .eyeleft{
+
+			animation: eyemoving 1s linear 0.2s 5 ; 
+			animation-fill-mode: backwards;
+
+		}
+
+
+		@keyframes mouthmoving{
+			0%{
+
+				border-radius: 40%;
+			}
+			25%{
+				border-radius: 42%;
+            	}
+			50%{
+				border-radius: 45%;
+			}
+			75%{border-radius: 47%;}
+			
+		    100%{border-radius: 50%;}
+			}
+
+
+
+			.circle:hover .mouth{
+		   animation: mouthmoving 1s linear 0.2s 5 ; 
+		 animation-fill-mode: backwards;
+		 border-radius: 50%;
+		}
+	.circle:hover .mouth2{
+		   animation: mouthmoving 1s linear 0.2s 5 ; 
+		 animation-fill-mode: backwards;
+		 border-radius: 50%;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="circle">
+		
+		<div class="eyeleft"></div>
+		<div class="eyeright"></div>
+		<div class="nose"></div>
+		<div class="mouth"></div>
+	</div>
+
+	<div class="circle">
+		
+		<div class="eyeleft"></div>
+		<div class="eyeright"></div>
+		<div class="nose"></div>
+		<div class="mouth2"></div>
+	</div>
+	
+
+
+</body>
+</html>
